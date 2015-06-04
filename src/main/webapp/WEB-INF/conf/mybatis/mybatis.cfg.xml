@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- common -->
+		<typeAlias alias="hashmap" type="java.util.HashMap" />
+		<typeAlias alias="timestamp" type="java.sql.Timestamp" />
+		<typeAlias alias="long" type="java.lang.Long" />
+		<typeAlias alias="int" type="java.lang.Integer" />
+		<typeAlias alias="string" type="java.lang.String" />
+		
+		<typeAlias alias="user" type="cn.com.example.entity.User" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="/mybatis/UserDao.xml" />
+	</mappers>
+</configuration>
