@@ -24,7 +24,7 @@ public class UserController {
 	 * @param request
 	 * @param response
 	 */
-	@RequestMapping(value = "/create.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@ResponseBody
 	public void create(HttpServletRequest request, HttpServletResponse response) {
 		String userName = StringUtils.defaultIfBlank(request.getParameter("userName"), "guest");
@@ -33,5 +33,16 @@ public class UserController {
 		user.setName(userName);
 		
 		userService.create(user);
+	}
+	
+	/**
+	 * ÐÂ½¨
+	 * @param request
+	 * @param response
+	 */
+	@RequestMapping(value = "/select")
+	@ResponseBody
+	public String select(HttpServletRequest request, HttpServletResponse response) {
+		return userService.select(2).getName();
 	}
 }

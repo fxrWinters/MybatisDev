@@ -14,4 +14,8 @@ public class UserServcie {
 	public void create(User user) {
 		userDao.create(user);
 	}
+	
+	public User select(int userId) {
+		return userDao.select(userId);
+	}
 }
